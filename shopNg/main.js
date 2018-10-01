@@ -1064,7 +1064,7 @@ __webpack_require__.r(__webpack_exports__);
 var ProductService = /** @class */ (function () {
     function ProductService(http) {
         this.http = http;
-        this.url = "http://localhost:3000/api/products/";
+        this.url = "/api/products/";
     }
     ProductService.prototype.getProducts = function () {
         return this.http.get(this.url);
@@ -1448,7 +1448,7 @@ __webpack_require__.r(__webpack_exports__);
 var TransactionService = /** @class */ (function () {
     function TransactionService(http) {
         this.http = http;
-        this.url = "http://localhost:3000/api/transactions/";
+        this.url = "/api/transactions/";
     }
     TransactionService.prototype.getTransactions = function () {
         return this.http.get(this.url);
