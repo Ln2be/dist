@@ -48,7 +48,7 @@ module.exports = "/*!\n * Bootstrap v4.1.3 (https://getbootstrap.com/)\n * Copyr
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/* You can add global styles to this file, and also import other style files */\n"
+module.exports = "\n@import url('https://fonts.googleapis.com/css?family=Lateef');\n/* You can add global styles to this file, and also import other style files */\ndiv {\n    font-family: Lateef;\n}\ndiv {\n    font-size: 1.5rem\n}\nmybutton {\n    font-size: 1.5rem\n}"
 
 /***/ }),
 
