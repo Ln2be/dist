@@ -884,6 +884,25 @@ var AppModule = /** @class */ /*@__PURE__*/ (function () {
 
 /***/ }),
 
+/***/ "./src/app/consts.ts":
+/*!***************************!*\
+  !*** ./src/app/consts.ts ***!
+  \***************************/
+/*! exports provided: CONSTS */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CONSTS", function() { return CONSTS; });
+var CONSTS = {
+    urlp: "http://localhost:3000/api/",
+    url: "api/"
+};
+
+
+
+/***/ }),
+
 /***/ "./src/app/find-product/find-product.component.css.shim.ngstyle.js":
 /*!*************************************************************************!*\
   !*** ./src/app/find-product/find-product.component.css.shim.ngstyle.js ***!
@@ -1275,14 +1294,16 @@ var HomeComponent = /** @class */ /*@__PURE__*/ (function () {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LqProductService", function() { return LqProductService; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var _consts__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./consts */ "./src/app/consts.ts");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+
 
 
 var LqProductService = /** @class */ /*@__PURE__*/ (function () {
     function LqProductService(http) {
         this.http = http;
-        this.url = "http://localhost:3000/api/lq_products/";
+        this.url = _consts__WEBPACK_IMPORTED_MODULE_0__["CONSTS"].url + "lq.products/";
     }
     LqProductService.prototype.getLqProducts = function () {
         return this.http.get(this.url);
@@ -1299,7 +1320,7 @@ var LqProductService = /** @class */ /*@__PURE__*/ (function () {
     LqProductService.prototype.putLqProduct = function (_id, lqProduct) {
         return this.http.put(this.url + "/" + _id, lqProduct);
     };
-    LqProductService.ngInjectableDef = _angular_core__WEBPACK_IMPORTED_MODULE_0__["defineInjectable"]({ factory: function LqProductService_Factory() { return new LqProductService(_angular_core__WEBPACK_IMPORTED_MODULE_0__["inject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"])); }, token: LqProductService, providedIn: "root" });
+    LqProductService.ngInjectableDef = _angular_core__WEBPACK_IMPORTED_MODULE_1__["defineInjectable"]({ factory: function LqProductService_Factory() { return new LqProductService(_angular_core__WEBPACK_IMPORTED_MODULE_1__["inject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"])); }, token: LqProductService, providedIn: "root" });
     return LqProductService;
 }());
 
@@ -1505,15 +1526,17 @@ var OthersComponent = /** @class */ /*@__PURE__*/ (function () {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ProductService", function() { return ProductService; });
 /* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/index.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var _consts__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./consts */ "./src/app/consts.ts");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+
 
 
 
 var ProductService = /** @class */ /*@__PURE__*/ (function () {
     function ProductService(http) {
         this.http = http;
-        this.url = "http://localhost:3000/api/products/";
+        this.url = _consts__WEBPACK_IMPORTED_MODULE_1__["CONSTS"].url + "products/";
     }
     ProductService.prototype.getProducts = function () {
         return this.http.get(this.url);
@@ -1540,7 +1563,7 @@ var ProductService = /** @class */ /*@__PURE__*/ (function () {
     ProductService.prototype.catchProduct = function () {
         return this.OProduct;
     };
-    ProductService.ngInjectableDef = _angular_core__WEBPACK_IMPORTED_MODULE_1__["defineInjectable"]({ factory: function ProductService_Factory() { return new ProductService(_angular_core__WEBPACK_IMPORTED_MODULE_1__["inject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"])); }, token: ProductService, providedIn: "root" });
+    ProductService.ngInjectableDef = _angular_core__WEBPACK_IMPORTED_MODULE_2__["defineInjectable"]({ factory: function ProductService_Factory() { return new ProductService(_angular_core__WEBPACK_IMPORTED_MODULE_2__["inject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClient"])); }, token: ProductService, providedIn: "root" });
     return ProductService;
 }());
 
@@ -1918,8 +1941,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TransactionService", function() { return TransactionService; });
 /* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/index.js");
 /* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var _consts__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./consts */ "./src/app/consts.ts");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+
 
 
 
@@ -1927,7 +1952,7 @@ __webpack_require__.r(__webpack_exports__);
 var TransactionService = /** @class */ /*@__PURE__*/ (function () {
     function TransactionService(http) {
         this.http = http;
-        this.url = "http://localhost:3000/api/transactions/";
+        this.url = _consts__WEBPACK_IMPORTED_MODULE_2__["CONSTS"].url + "transactions/";
     }
     TransactionService.prototype.getTransactions = function () {
         return this.http.get(this.url);
@@ -1953,6 +1978,7 @@ var TransactionService = /** @class */ /*@__PURE__*/ (function () {
     TransactionService.prototype.catchTransaction = function () {
         return this.Otransaction;
     };
+    // url = "http://localhost:3000/api/transactions/";
     TransactionService.prototype.handleError = function (operation, result) {
         if (operation === void 0) {
             operation = 'operation';
@@ -1966,7 +1992,7 @@ var TransactionService = /** @class */ /*@__PURE__*/ (function () {
             return Object(rxjs__WEBPACK_IMPORTED_MODULE_0__["of"])(result);
         };
     };
-    TransactionService.ngInjectableDef = _angular_core__WEBPACK_IMPORTED_MODULE_2__["defineInjectable"]({ factory: function TransactionService_Factory() { return new TransactionService(_angular_core__WEBPACK_IMPORTED_MODULE_2__["inject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClient"])); }, token: TransactionService, providedIn: "root" });
+    TransactionService.ngInjectableDef = _angular_core__WEBPACK_IMPORTED_MODULE_3__["defineInjectable"]({ factory: function TransactionService_Factory() { return new TransactionService(_angular_core__WEBPACK_IMPORTED_MODULE_3__["inject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpClient"])); }, token: TransactionService, providedIn: "root" });
     return TransactionService;
 }());
 
