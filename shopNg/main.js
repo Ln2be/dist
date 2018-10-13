@@ -1303,7 +1303,7 @@ __webpack_require__.r(__webpack_exports__);
 var LqProductService = /** @class */ /*@__PURE__*/ (function () {
     function LqProductService(http) {
         this.http = http;
-        this.url = _consts__WEBPACK_IMPORTED_MODULE_0__["CONSTS"].url + "lq.products/";
+        this.url = _consts__WEBPACK_IMPORTED_MODULE_0__["CONSTS"].url + "lq_products/";
     }
     LqProductService.prototype.getLqProducts = function () {
         return this.http.get(this.url);
