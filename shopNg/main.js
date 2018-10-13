@@ -895,6 +895,7 @@ var AppModule = /** @class */ /*@__PURE__*/ (function () {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CONSTS", function() { return CONSTS; });
 var CONSTS = {
+    // url : "http://localhost:3000/api/",
     url: "api/"
 };
 
